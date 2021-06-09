@@ -15,3 +15,11 @@ AnnoSINE has eight major modules. The first one is to identify putative SINE can
 
 # Installation
 AnnoSINE is developed in Python with dependences: HMMER, TSD Search, BLAST, TRF, IRF, CD-HIT, RepeatMasker
+
+# Inputs
+
+# Outputs
+
+# Usage
+
+# Citations
