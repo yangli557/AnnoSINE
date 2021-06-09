@@ -3,6 +3,7 @@
 - [Installation](#heading-1)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
+- [Testing](#heading-2)
 - [Inputs](#heading-2)
 - [Outputs](#heading-3)
 - [Usage](#heading-4)
@@ -27,6 +28,8 @@ AnnoSINE is developed in Python with dependences: HMMER, BLAST+, TRF, IRF, CD-HI
 [CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
 
 [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
+
+# Testing
 
 # Inputs
 
