@@ -4,13 +4,13 @@ SINE Annotation Tool for Plant Genomes
 
 # Table of Contents
 - [Introduction](#Introduction)
+- [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
-- [Testing](#Testing)
-- [Inputs](#Inputs)
-- [Outputs](#Outputs)
 - [Usage](#Usage)
+- * [Argument description](##Argumentdescription)
+- * [Inputs](##Inputs)
+- * [Outputs](##Outputs)
+- [Example](#Example)
 - [Citations](#Citations)
 
 # Introduction
@@ -28,6 +28,9 @@ To use AnnoSINE, you need to install the tools listed below.
  - [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
  - [CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
+
+# Installation
+
 
 # Usage
 
