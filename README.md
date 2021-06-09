@@ -29,25 +29,13 @@ To use AnnoSINE, you need to install the tools listed below.
  - [CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
 
-# Testing
-You can test the AnnoSINE using a small genome.
-
-# Inputs
-Genome sequence(fasta format).
-
-# Outputs
-
 # Usage
-```
-Example: python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
-```
 
 ```
-usage: AnnoSINE.py [-h] [-evalue1] [-evalue2] [-l] [-c] [-s] [-g] [-minc]
-                   [-maxb] [-p] [-b] [-m]               
-                   mode i o    
+python AnnoSINE.py [options] <mode> <input_filename> <output_filename>
 ```
 
+## Avalable Options
 ```
 positional arguments:
   mode                  [1 | 2 | 3]  
@@ -73,5 +61,15 @@ optional arguments:
   -m, --model                Choose the rule/learning mode of repeat pattern examination (default: rule)
 ```
 
+## Inputs
+Genome sequence(fasta format).
+
+## Outputs
+
+
+# Example:
+```
+python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
+```
 
 # Citations
