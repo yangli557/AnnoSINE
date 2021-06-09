@@ -21,11 +21,11 @@ AnnoSINE has eight major modules. The first one is to identify putative SINE can
 # Prerequisites
 To use AnnoSINE, you need to install the tools listed below.
 
- - [Python](https://www.python.org/)
- - [HMMER 3.3.1](http://hmmer.org/download.html)
- - [BLAST+ 2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
- - [TRF 4.09](https://tandem.bu.edu/trf/trf.download.html)
- - [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
+ - [Python       3.7.4](https://www.python.org/)
+ - [HMMER        3.3.1](http://hmmer.org/download.html)
+ - [BLAST+       2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
+ - [TRF          4.09](https://tandem.bu.edu/trf/trf.download.html)
+ - [IRF          3.07](https://tandem.bu.edu/irf/irf.download.html)
  - [CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
 
