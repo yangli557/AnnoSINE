@@ -65,7 +65,7 @@ optional arguments:
   -l, --length_factor        Threshold of the local alignment length relative to the the BLAST query length (default: 0.3)  
   -c, --copy_number_factor   Threshold of the copy number that determines the SINE boundary (default: 0.15)                        
   -s, --shift                Maximum threshold of the boundary shift (default: 80)  
-  -g, --gap                  Maximum threshold of the boundary shift (default: 10)  
+  -g, --gap                  Maximum threshold of the trancated gap (default: 10)  
   -minc, --copy_number       Minimum threshold of the copy number for each element (default: 3)  
   -maxb, --base_copy_number  Maximum threshold of copy number for the first and last base (default: 1)                       
   -p, --probability          Minimum of the length proportion of tandem repeat to element (default: 0.5)  
