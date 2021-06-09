@@ -24,6 +24,10 @@ AnnoSINE is developed in Python with dependences: HMMER, BLAST+, TRF, IRF, CD-HI
 
 [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
 
+[CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
+
+[RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
+
 # Inputs
 
 # Outputs
