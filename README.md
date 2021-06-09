@@ -17,8 +17,11 @@ AnnoSINE has eight major modules. The first one is to identify putative SINE can
 AnnoSINE is developed in Python with dependences: HMMER, BLAST+, TRF, IRF, CD-HIT, and RepeatMasker. You need to specify the path to these packages.
 
 [HMMER 3.3.1](http://hmmer.org/download.html)
+
 [BLAST+ 2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
+
 [TRF 4.09](https://tandem.bu.edu/trf/trf.download.html)
+
 [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
 
 # Inputs
