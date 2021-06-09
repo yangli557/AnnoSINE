@@ -3,15 +3,15 @@
 SINE Annotation Tool for Plant Genomes
 
 # Table of Contents
-- [Introduction](#heading)
-- [Installation](#heading-1)
+- [Introduction](#Introduction)
+- [Installation](#Installation)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [Testing](#heading-2)
-- [Inputs](#heading-2)
-- [Outputs](#heading-3)
-- [Usage](#heading-4)
-- [Citations](#heading-2)
+- [Testing](#Testing)
+- [Inputs](#Inputs)
+- [Outputs](#Outputs)
+- [Usage](#Usage)
+- [Citations](#Citations)
 
 # Introduction
 AnnoSINE program is designed to generate high-quality non-redundant SINE libraries for genome annotation. It uses the manually curated SINE library in the *Oryza sativa* genome to benchmark the annotation performance.
@@ -21,11 +21,11 @@ AnnoSINE has eight major modules. The first one is to identify putative SINE can
 # Prerequisites
 To use AnnoSINE, you need to install the tools listed below.
 
- - [Python &emsp; &nbsp; &emsp; 3.7.4](https://www.python.org/)
- - [HMMER &emsp; &emsp; &emsp; 3.3.1](http://hmmer.org/download.html)
- - [BLAST+ &emsp; &nbsp; &ensp; 2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
- - [TRF&emsp;&emsp;&ensp;4.09](https://tandem.bu.edu/trf/trf.download.html)
- - [IRF&emsp;&emsp;&ensp;3.07](https://tandem.bu.edu/irf/irf.download.html)
+ - [Python 3.7.4](https://www.python.org/)
+ - [HMMER 3.3.1](http://hmmer.org/download.html)
+ - [BLAST+ 2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
+ - [TRF 4.09](https://tandem.bu.edu/trf/trf.download.html)
+ - [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
  - [CD-HIT](http://weizhongli-lab.org/cd-hit/download.php)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
 
