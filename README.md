@@ -40,11 +40,15 @@ Genome sequence(fasta format).
 # Usage
 ```
 Example: python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
+```
 
+```
 usage: AnnoSINE.py [-h] [-evalue1] [-evalue2] [-l] [-c] [-s] [-g] [-minc]
                    [-maxb] [-p] [-b] [-m]               
                    mode i o    
-                   
+```
+
+```
 positional arguments:
   mode                  [1 | 2 | 3]  
                         Choose the running mode of the program.                        
