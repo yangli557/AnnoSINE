@@ -35,7 +35,7 @@ To use AnnoSINE, you need to install the tools listed below.
 python AnnoSINE.py [options] <mode> <input_filename> <output_filename>
 ```
 
-## Avalable Options
+## Argument Description
 ```
 positional arguments:
   mode                  [1 | 2 | 3]  
@@ -43,8 +43,8 @@ positional arguments:
                                 1--Homology-based method;                                
                                 2--Structure-based method;                                
                                 3--Hybrid of homology-based and structure-based method.                               
-  i                     input genome assembly path  
-  o                     output files path
+  input_filename        input genome assembly path  
+  output_filename       output files path
   
 optional arguments:
   -h, --help                 show this help message and exit  
