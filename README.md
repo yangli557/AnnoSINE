@@ -7,7 +7,7 @@ SINE Annotation Tool for Plant Genomes
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
 - [Usage](#Usage)
-- * [Argument description](##Argumentdescription)
+- * [Argument description](##Argumentdescription-2)
 - * [Inputs](##Inputs)
 - * [Outputs](##Outputs)
 - [Example](#Example)
