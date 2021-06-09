@@ -38,7 +38,7 @@ To use AnnoSINE, you need to install the tools listed below.
 python AnnoSINE.py [options] <mode> <input_filename> <output_filename>
 ```
 
-## Argument Description
+## Argument
 ```
 positional arguments:
   mode                  [1 | 2 | 3]
