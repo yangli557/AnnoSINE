@@ -61,7 +61,9 @@ optional arguments:
   -maxb, --base_copy_number  Maximum threshold of copy number for the first and last base (default: 1)
   -p, --probability          Minimum of the length proportion of tandem repeat to element (default: 0.5)
   -b, --boundary             Output SINE seed boundaries based on TSD or MSA (default: tsd)
-  -m, --model                Choose the rule/learning mode of repeat pattern examination (default: rule)
+  -b, --boundary        Output SINE seed boundaries based on TSD or MSA (default: tsd)
+  -m, --model           Choose the rule/learning mode of repeat pattern examination (rule/learning) (default: rule)
+  -f, --figure          Output the SINE seed MSA figures and copy number profiles (y/n) (default: n)
 ```
 
 ## Inputs
