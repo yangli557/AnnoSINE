@@ -78,7 +78,7 @@ Genome sequence(fasta format).
 - MSA output: $ Step3_blast_output.out
 - Intermediate sequences with MSA quality examination: $ Step3_blast_process_output.fa
 - SINE candidate sequences after MSA quality examination: $ Step4_rna_input.fasta
-- SINE candidates blast againist RNA database outputs $ Step4_rna_output.out
+- SINE candidates blast against RNA database outputs $ Step4_rna_output.out
 - Classified SINE candidates after RNA examintation $ Step4_rna_output.fasta
 - TRF output $ Step4_rna_output.fasta.2.5.7.80.10.10.2000.dat
 - SINE candidates after removing elements consist of tandem repeats $ Step5_trf_output.fasta
