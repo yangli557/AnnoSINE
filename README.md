@@ -35,6 +35,9 @@ To use AnnoSINE, you need to install the tools listed below.
 
 # Installation
 
+```
+pip3 install -r requirements.txt
+```
 
 # Usage
 
