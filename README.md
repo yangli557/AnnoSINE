@@ -26,7 +26,7 @@ To use AnnoSINE, you need to install the tools listed below.
  - [BLAST+ 2.10.1](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.10.1/)
  - [TRF 4.09](https://tandem.bu.edu/trf/trf.download.html)
  - [IRF 3.07](https://tandem.bu.edu/irf/irf.download.html)
- - [CD-HIT 4.8.1 or above](http://weizhongli-lab.org/cd-hit/download.php)
+ - [CD-HIT 4.8.1](http://weizhongli-lab.org/cd-hit/download.php)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
 
 # Installation
