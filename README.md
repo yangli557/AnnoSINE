@@ -39,7 +39,7 @@ To use AnnoSINE, you need to install the tools listed below.
 # Usage
 
 ```
-python AnnoSINE.py [options] <mode> <input_filename> <output_filename>
+python3 AnnoSINE.py [options] <mode> <input_filename> <output_filename>
 ```
 
 ## Argument
