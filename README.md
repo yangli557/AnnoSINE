@@ -69,7 +69,6 @@ optional arguments:
   -p, --probability          Minimum of the length proportion of tandem repeat to element (default: 0.5)
   -b, --boundary             Output SINE seed boundaries based on TSD or MSA (default: tsd)
   -b, --boundary        Output SINE seed boundaries based on TSD or MSA (default: tsd)
-  -m, --model           Choose the rule/learning mode of repeat pattern examination (rule/learning) (default: rule)
   -f, --figure          Output the SINE seed MSA figures and copy number profiles (y/n) (default: n)
 ```
 
