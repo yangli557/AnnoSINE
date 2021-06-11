@@ -53,8 +53,8 @@ positional arguments:
                                 1--Homology-based method;
                                 2--Structure-based method;
                                 3--Hybrid of homology-based and structure-based method.
-  input_file_path        input genome assembly path
-  output_file_path      output files path
+  input_filename        input genome assembly path
+  output_filename       output files path
 
 optional arguments:
   -h, --help                 show this help message and exit
