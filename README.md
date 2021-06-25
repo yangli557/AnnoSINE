@@ -72,6 +72,10 @@ optional arguments:
 Genome sequence(fasta format).
 
 ## Outputs
+- Redundant SINE library: $ Step7_cluster_output.fasta
+- Non-redundant SINE library with serial number: $Seed_SINE.fa.
+- Whole-genome SINE annotation: $Input_genome.fasta.out. This file contains high-similarity SINE annotations.
+## Intermediate Files
 - SINE candidates information predicted by homology search: $ ../Family_Seq/Family_Name/Family_Name.out. (m=1 or 3 required)
 - SINE candidate sequences predicted by structure search: $ ../Input_Files/Input_genome-matches.fasta. (m=2 or 3 required)
 - Extended candidate sequences for TSD search: $ Step1_extend_tsd_input.fa
@@ -87,11 +91,7 @@ Genome sequence(fasta format).
 - SINE candidate sequences after extension: $ Step6_irf_input.fasta.
 - IRF output $ Step6_irf_input.fasta.2.3.5.80.10.20.500000.10000.dat
 - SINE candidates after removing elements flanked with inverted repeats: $ Step6_irf_output.fasta
-- Non-redundant SINE library: $ Step7_cluster_output.fasta
 - CD-HIT output: $ Step7_cluster_output.fasta.clstr
-- Non-redundant SINE library with serial number: $Seed_SINE.fa.
-- Whole-genome SINE annotation: $Input_genome.fasta.out. This file contains high-similarity SINE annotations.
-
 # Example:
 ```
 python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
