@@ -98,7 +98,7 @@ Genome sequence(fasta format).
 You can test the AnnoSINE with one chromosome in *Arabisopsis thaliana* (it takes about 10 mins).
 ```
 cd ./AnnoSINE/bin
-python3 AnnoSINE.py 3 ../Testing/Input_Files/A.thaliana_Chr1.fasta ../Output_Files
+python3 AnnoSINE.py 3 ../Testing/A.thaliana_Chr4.fasta ../Output_Files
 ```
 
 # Citations
