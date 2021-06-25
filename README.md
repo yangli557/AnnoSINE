@@ -10,7 +10,7 @@ SINE Annotation Tool for Plant Genomes
 - * [Argument](#Argument)
 - * [Inputs](#Inputs)
 - * [Outputs](#Outputs)
-- [Example](#Example)
+- * [Testing](#Testing)
 - [Citations](#Citations)
 
 # Introduction
@@ -70,10 +70,12 @@ optional arguments:
 
 ## Inputs
 Genome sequence(fasta format).
+
 ## Outputs
 - Redundant SINE library: $ Step7_cluster_output.fasta
 - Non-redundant SINE library with serial number: $Seed_SINE.fa.
 - Whole-genome SINE annotation: $Input_genome.fasta.out. This file contains high-similarity SINE annotations.
+
 ## Intermediate Files
 - SINE candidates information predicted by homology search: $ ../Family_Seq/Family_Name/Family_Name.out. (m=1 or 3 required)
 - SINE candidate sequences predicted by structure search: $ ../Input_Files/Input_genome-matches.fasta. (m=2 or 3 required)
@@ -91,11 +93,12 @@ Genome sequence(fasta format).
 - IRF output $ Step6_irf_input.fasta.2.3.5.80.10.20.500000.10000.dat
 - SINE candidates after removing elements flanked with inverted repeats: $ Step6_irf_output.fasta
 - CD-HIT output: $ Step7_cluster_output.fasta.clstr
-# Testing 
 
-# Example:
+# Testing 
+You can test the AnnoSINE with one chromosome in *Arabisopsis thaliana* (it takes about 10 mins).
 ```
-python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
+cd ./AnnoSINE/bin
+python3 AnnoSINE.py 3 ../Testing/Input_Files/A.thaliana_Chr1.fasta ../Output_Files
 ```
 
 # Citations
