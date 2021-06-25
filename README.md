@@ -70,7 +70,6 @@ optional arguments:
 
 ## Inputs
 Genome sequence(fasta format).
-
 ## Outputs
 - Redundant SINE library: $ Step7_cluster_output.fasta
 - Non-redundant SINE library with serial number: $Seed_SINE.fa.
@@ -92,6 +91,8 @@ Genome sequence(fasta format).
 - IRF output $ Step6_irf_input.fasta.2.3.5.80.10.20.500000.10000.dat
 - SINE candidates after removing elements flanked with inverted repeats: $ Step6_irf_output.fasta
 - CD-HIT output: $ Step7_cluster_output.fasta.clstr
+# Testing 
+
 # Example:
 ```
 python3 AnnoSINE.py 2 ../Input_Files/GCA_000001735.2_TAIR10.1_genomic.fasta ../Output_Files
