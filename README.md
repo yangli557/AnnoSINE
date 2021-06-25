@@ -68,7 +68,6 @@ optional arguments:
   -maxb, --base_copy_number  Maximum threshold of copy number for the first and last base (default: 1)
   -p, --probability          Minimum of the length proportion of tandem repeat to element (default: 0.5)
   -b, --boundary             Output SINE seed boundaries based on TSD or MSA (default: tsd)
-  -b, --boundary        Output SINE seed boundaries based on TSD or MSA (default: tsd)
   -f, --figure          Output the SINE seed MSA figures and copy number profiles (y/n) (default: n)
   -r, --non_redundant    Annotate SINE in the whole genome based on the non—redundant library (y/n) (default: y)
 ```
