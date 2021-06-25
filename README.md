@@ -70,6 +70,7 @@ optional arguments:
   -b, --boundary             Output SINE seed boundaries based on TSD or MSA (default: tsd)
   -b, --boundary        Output SINE seed boundaries based on TSD or MSA (default: tsd)
   -f, --figure          Output the SINE seed MSA figures and copy number profiles (y/n) (default: n)
+  -r, --non_redundant    Annotate SINE in the whole genome based on the non—redundant library (y/n) (default: y)
 ```
 
 ## Inputs
