@@ -1005,12 +1005,12 @@ def genome_annotate(in_genome_assembly_path, out_genome_assembly_path, in_nonred
     if in_nonredundant == 'y':
         os.system('RepeatMasker -e ncbi -pa 36 -q -no_is -norna -nolow -div 40 '
                   '-lib  ' + out_genome_assembly_path + '/Seed_SINE.fa '
-                  '-cutoff 225 ' + in_genome_assembly_path.replace('..', '') + ' '
+                  '-cutoff 225 ' + in_genome_assembly_path + ' '
                   '-dir ' + out_genome_assembly_path + '/RepeatMasker/')
     elif in_nonredundant == 'n':
         os.system('RepeatMasker -e ncbi -pa 36 -q -no_is -norna -nolow -div 40 '
                   '-lib  ' + out_genome_assembly_path + '/Step7_cluster_output.fasta '
-                  '-cutoff 225 ' + in_genome_assembly_path.replace('..', '') + ' '
+                  '-cutoff 225 ' + in_genome_assembly_path + ' '
                   '-dir ' + out_genome_assembly_path + '/RepeatMasker/')
 
 
