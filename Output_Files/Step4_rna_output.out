@@ -1,0 +1,469 @@
+BLASTN 2.10.1+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: User specified sequence set (Input: ../Input_Files/rna_database.fa).
+           1,729 sequences; 171,581 total letters
+
+
+
+Query= CP002687.1 C
+2412601:2412766|tsd_l:14|tsd_s:2412597|tsd_e:2412770|blast_s:2412598
+|blast_e:2412768|blast_count:22|blast_l:373
+
+Length=170
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+K00282.1/1-73                                                         31.0    0.018
+Z74072.1/3173-3245                                                    31.0    0.018
+X51824.1/381-453                                                      30.1    0.018
+Y14522.1/1-81                                                         28.3    0.063
+X02167.1/179-251                                                      28.3    0.063
+D10743.1/4-76                                                         28.3    0.063
+AF160864.1/20552-20480                                                28.3    0.063
+J01478.1/118-188                                                      27.4    0.22 
+X04779.1/1-73                                                         27.4    0.22 
+X57046.1/121-203                                                      26.5    0.22 
+K00344.1/1-73                                                         26.5    0.22 
+M26928.1/1266-1194                                                    26.5    0.22 
+M68929.1/49940-50012                                                  26.5    0.22 
+U24159.1/431-359                                                      26.5    0.22 
+AL589879.21/171955-172027                                             26.5    0.22 
+AF008220.1/5430-5502                                                  26.5    0.22 
+X52070.1/699-771                                                      25.6    0.77 
+K00287.1/1-73                                                         25.6    0.77 
+X16759.1/1-73                                                         25.6    0.77 
+AL352978.6/119697-119770                                              25.6    0.77 
+AC005783.1/27398-27326                                                25.6    0.77 
+AB031213.1/2203-2276                                                  25.6    0.77 
+EU349704.1/1154-1217                                                  24.7    0.77 
+M32254.1/51-124                                                       24.7    0.77 
+M57698.1/294-367                                                      24.7    0.77 
+K00277.1/1-73                                                         24.7    0.77 
+M68929.1/166107-166035                                                24.7    0.77 
+J01390.1/12336-12408                                                  24.7    0.77 
+L02941.1/716-643                                                      24.7    0.77 
+M22010.1/2934-3006                                                    24.7    0.77 
+X60981.1/3446-3518                                                    24.7    0.77 
+AF008220.1/6620-6692                                                  24.7    0.77 
+
+
+> K00282.1/1-73
+Length=73
+
+ Score = 31.0 bits (33),  Expect = 0.018
+ Identities = 18/19 (95%), Gaps = 0/19 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAACGAC  161
+            |||||| ||||||||||||
+Sbjct  21   TACCAACTGAGCTAACGAC  3
+
+
+> Z74072.1/3173-3245
+Length=73
+
+ Score = 31.0 bits (33),  Expect = 0.018
+ Identities = 18/19 (95%), Gaps = 0/19 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCTCT  122
+            ||||||||||| |||||||
+Sbjct  60   AATCGAACCGGAGACCTCT  42
+
+
+> X51824.1/381-453
+Length=73
+
+ Score = 30.1 bits (32),  Expect = 0.018
+ Identities = 16/16 (100%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  106  TCGAACCGGCGACCTC  121
+            ||||||||||||||||
+Sbjct  58   TCGAACCGGCGACCTC  43
+
+
+> Y14522.1/1-81
+Length=81
+
+ Score = 28.3 bits (30),  Expect = 0.063
+ Identities = 15/15 (100%), Gaps = 0/15 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGAC  118
+            |||||||||||||||
+Sbjct  68   AATCGAACCGGCGAC  54
+
+
+> X02167.1/179-251
+Length=73
+
+ Score = 28.3 bits (30),  Expect = 0.063
+ Identities = 15/15 (100%), Gaps = 0/15 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAA  157
+            |||||||||||||||
+Sbjct  21   TACCAATTGAGCTAA  7
+
+
+> D10743.1/4-76
+Length=73
+
+ Score = 28.3 bits (30),  Expect = 0.063
+ Identities = 15/15 (100%), Gaps = 0/15 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAA  157
+            |||||||||||||||
+Sbjct  21   TACCAATTGAGCTAA  7
+
+
+> AF160864.1/20552-20480
+Length=73
+
+ Score = 28.3 bits (30),  Expect = 0.063
+ Identities = 18/20 (90%), Gaps = 0/20 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCTCTA  123
+            ||||||||| ||||||| ||
+Sbjct  60   AATCGAACCCGCGACCTTTA  41
+
+
+> J01478.1/118-188
+Length=71
+
+ Score = 27.4 bits (29),  Expect = 0.22
+ Identities = 16/17 (94%), Gaps = 0/17 (0%)
+ Strand=Plus/Minus
+
+Query  141  TATACCAATTGAGCTAA  157
+            |||||||||| ||||||
+Sbjct  23   TATACCAATTAAGCTAA  7
+
+
+> X04779.1/1-73
+Length=73
+
+ Score = 27.4 bits (29),  Expect = 0.22
+ Identities = 16/17 (94%), Gaps = 0/17 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCT  120
+            ||||||||| |||||||
+Sbjct  60   AATCGAACCAGCGACCT  44
+
+
+> X57046.1/121-203
+Length=83
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 14/14 (100%), Gaps = 0/14 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTA  156
+            ||||||||||||||
+Sbjct  21   TACCAATTGAGCTA  8
+
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACC  119
+            ||||||||| ||||||
+Sbjct  71   AATCGAACCAGCGACC  56
+
+
+> K00344.1/1-73
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 23/29 (79%), Gaps = 0/29 (0%)
+ Strand=Plus/Minus
+
+Query  91   TGTCACAAACGTCAATCGAACCGGCGACC  119
+            ||||||||||    |||||||||  ||||
+Sbjct  73   TGTCACAAACCGGGATCGAACCGATGACC  45
+
+
+> M26928.1/1266-1194
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 17/19 (89%), Gaps = 0/19 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCTCT  122
+            ||||||||||  |||||||
+Sbjct  60   AATCGAACCGATGACCTCT  42
+
+
+> M68929.1/49940-50012
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 14/14 (100%), Gaps = 0/14 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTA  156
+            ||||||||||||||
+Sbjct  21   TACCAATTGAGCTA  8
+
+
+> U24159.1/431-359
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 17/19 (89%), Gaps = 0/19 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAACGAC  161
+            |||| | ||||||||||||
+Sbjct  21   TACCGACTGAGCTAACGAC  3
+
+
+> AL589879.21/171955-172027
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 14/14 (100%), Gaps = 0/14 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTA  156
+            ||||||||||||||
+Sbjct  21   TACCAATTGAGCTA  8
+
+
+> AF008220.1/5430-5502
+Length=73
+
+ Score = 26.5 bits (28),  Expect = 0.22
+ Identities = 14/14 (100%), Gaps = 0/14 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTA  156
+            ||||||||||||||
+Sbjct  21   TACCAATTGAGCTA  8
+
+
+> X52070.1/699-771
+Length=73
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  145  CCAATTGAGCTAACGA  160
+            |||||||||||| |||
+Sbjct  19   CCAATTGAGCTACCGA  4
+
+
+> K00287.1/1-73
+Length=73
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAAC  158
+            |||||| |||||||||
+Sbjct  21   TACCAACTGAGCTAAC  6
+
+
+> X16759.1/1-73
+Length=73
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  106  TCGAACCGGCGACCTC  121
+            ||||||| ||||||||
+Sbjct  58   TCGAACCTGCGACCTC  43
+
+
+> AL352978.6/119697-119770
+Length=74
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  105  ATCGAACCGGCGACCT  120
+            |||||||| |||||||
+Sbjct  60   ATCGAACCCGCGACCT  45
+
+
+> AC005783.1/27398-27326
+Length=73
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  105  ATCGAACCGGCGACCT  120
+            |||||||||| |||||
+Sbjct  59   ATCGAACCGGGGACCT  44
+
+
+> AB031213.1/2203-2276
+Length=74
+
+ Score = 25.6 bits (27),  Expect = 0.77
+ Identities = 15/16 (94%), Gaps = 0/16 (0%)
+ Strand=Plus/Minus
+
+Query  106  TCGAACCGGCGACCTC  121
+            ||||||| ||||||||
+Sbjct  59   TCGAACCCGCGACCTC  44
+
+
+> EU349704.1/1154-1217
+Length=64
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 13/13 (100%), Gaps = 0/13 (0%)
+ Strand=Plus/Minus
+
+Query  119  CTCTAAGCTTCGC  131
+            |||||||||||||
+Sbjct  17   CTCTAAGCTTCGC  5
+
+
+> M32254.1/51-124
+Length=74
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  108  GAACCGGCGACCTCTAAG  125
+            ||||| ||||||||| ||
+Sbjct  57   GAACCTGCGACCTCTGAG  40
+
+
+> M57698.1/294-367
+Length=74
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 13/13 (100%), Gaps = 0/13 (0%)
+ Strand=Plus/Minus
+
+Query  106  TCGAACCGGCGAC  118
+            |||||||||||||
+Sbjct  59   TCGAACCGGCGAC  47
+
+
+> K00277.1/1-73
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCTC  121
+            |||||||||| |||| ||
+Sbjct  60   AATCGAACCGCCGACATC  43
+
+
+> M68929.1/166107-166035
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  108  GAACCGGCGACCTCTAAG  125
+            ||||| ||||||| ||||
+Sbjct  56   GAACCTGCGACCTTTAAG  39
+
+
+> J01390.1/12336-12408
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 13/13 (100%), Gaps = 0/13 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCT  155
+            |||||||||||||
+Sbjct  21   TACCAATTGAGCT  9
+
+
+> L02941.1/716-643
+Length=74
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  104  AATCGAACCGGCGACCTC  121
+            ||||||||| | ||||||
+Sbjct  61   AATCGAACCCGTGACCTC  44
+
+
+> M22010.1/2934-3006
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  140  TTATACCAATTGAGCTAA  157
+            || |||||||||| ||||
+Sbjct  24   TTCTACCAATTGAACTAA  7
+
+
+> X60981.1/3446-3518
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  105  ATCGAACCGGCGACCTCT  122
+            ||||||||| ||||| ||
+Sbjct  59   ATCGAACCGCCGACCCCT  42
+
+
+> AF008220.1/6620-6692
+Length=73
+
+ Score = 24.7 bits (26),  Expect = 0.77
+ Identities = 16/18 (89%), Gaps = 0/18 (0%)
+ Strand=Plus/Minus
+
+Query  143  TACCAATTGAGCTAACGA  160
+            |||||| ||||||| |||
+Sbjct  21   TACCAACTGAGCTACCGA  4
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 21349768
+
+
+  Database: User specified sequence set (Input: ../Input_Files/rna_database.fa).
+    Posted date:  Unknown
+  Number of letters in database: 171,581
+  Number of sequences in database:  1,729
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2

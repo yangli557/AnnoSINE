@@ -1,0 +1,15 @@
+Inverted Repeats Finder Program writen by:
+
+Gary Benson
+Department of Biomathematical Sciences
+Mount Sinai School of Medicine
+Version 3.05
+
+
+Sequence: CP002687.1 C 2412601:2412766|tsd_l:14|tsd_s:2412597|tsd_e:2412770|blast_s:2412598|blast_e:2412768|blast_count:22|blast_l:373|t
+
+
+
+Parameters: 2 3 5 80 10 20 500000 10000 -d -h -t4 74 -t5 493 -t7 10000 
+
+
