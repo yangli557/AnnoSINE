@@ -1014,9 +1014,9 @@ def genome_annotate(in_genome_assembly_path, out_genome_assembly_path, in_nonred
                   '-dir ' + out_genome_assembly_path + '/RepeatMasker/')
 
 
-def sine_finder():
+def sine_finder(genome_assembly_path):
     #main_func()
-    os.system('python3 ./SINEFinder.py')
+    os.system('python3 ./SINEFinder.py ' + genome_assembly_path)
 
 
 def save_to_fna_4(filename, input_sequences, input_id, input_direct, input_start, input_end):
@@ -1109,13 +1109,13 @@ def main_function():
         process_hmm_output_3(1e-10, input_genome_assembly_path, input_pattern, output_genome_assembly_path)
     elif input_pattern == 2:
         print('================ Step 1: Structure search has begun ==================')
-        sine_finder()
+        sine_finder(input_genome_assembly_path)
         process_sine_finder(input_genome_assembly_path, input_sine_finder, output_genome_assembly_path, input_pattern)
     elif input_pattern == 3:
         print('====== Step 1: HMMER prediction and structure search has begun =======')
         hmm_predict(input_genome_assembly_path)
         process_hmm_output_3(1e-10, input_genome_assembly_path, input_pattern, output_genome_assembly_path)
-        sine_finder()
+        sine_finder(input_genome_assembly_path)
         process_sine_finder(input_genome_assembly_path, input_sine_finder, output_genome_assembly_path, input_pattern)
     merge_tsd_input(input_pattern, output_genome_assembly_path)
     print('\n======================== Step 1 has been done ========================\n\n')
