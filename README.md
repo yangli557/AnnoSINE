@@ -100,24 +100,6 @@ You can test the AnnoSINE with one chromosome in *Arabisopsis thaliana* (it take
 cd ./AnnoSINE/bin
 python3 AnnoSINE.py 3 ../Testing/A.thaliana_Chr4.fasta ../Output_Files
 ```
-You need to select the directory number for the input genome sequence (A.thaliana_Chr4.fasta) while running SINE-Finder.
-Select the file to be analysed (input_required):
-(  0) UP ONE DIR
-```
-0
-```
-(  3) CHANGE DIR TO...Testing
-```
-3
-```
-(  1) A.thaliana_Chr4.fasta
-```
-1
-```
-Start job with these arguments: y(es), n(o) or q(uit)? 
-```
-y
-```
 Results of AnnoSINE tests on testing data are saved in Output_Files.
 
 # Citations
