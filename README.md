@@ -32,6 +32,7 @@ To use AnnoSINE, you need to install the tools listed below.
  - [IRF 3.05](https://tandem.bu.edu/irf/irf.download.html)
  - [CD-HIT 4.8.1](https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.8.1-2019-0228.tar.gz)
  - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/)
+ - [Node 12.18.2](https://nodejs.org/en/download/)
 
 # Installation
 
