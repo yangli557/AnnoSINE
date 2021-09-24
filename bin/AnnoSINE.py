@@ -806,7 +806,7 @@ def process_rna(out_genome_assembly_path):
 
 def tandem_repeat_finder(out_genome_assembly_path):
     #path = os.path.abspath(os.path.dirname(os.getcwd()))
-    os.system('trf409.linux64 '
+    os.system('trf409.macosx '
               + out_genome_assembly_path + '/Step4_rna_output.fasta '
               '2 5 7 80 10 10 2000 -d -h -l 6')
 
