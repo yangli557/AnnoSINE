@@ -37,13 +37,23 @@ To use AnnoSINE, you need to install the tools listed below.
 # Installation
 
 ```
+# pip
 cd ./AnnoSINE/bin
 pip3 install -r requirements.txt
+
+# conda
+conda env create -f AnnoSINE.conda.yaml
+
+## download IRF
+mv irf305.linux.exe irf
+## set PATH for IRF
+export PATH=$IRF_PATH:$PATH
 ```
 
 # Usage
 
 ```
+conda activate AnnoSINE
 python3 AnnoSINE.py [options] <mode> <input_filename> <output_filename>
 ```
 

@@ -48,10 +48,12 @@ parser.add_argument("-f", "--figure", metavar='', type=str, default='y',
                     help="Output the SINE seed MSA figures and copy number profiles (y/n) (default: y)")
 parser.add_argument("-r", "--non_redundant", metavar='', type=str, default='y',
                     help="Annotate SINE in the whole genome based on the non-redundant library (y/n) (default: y)")
+parser.add_argument("-t", "--threads", metavar='', type=int, default=36,
+                    help="Threads for each tools(default: 36)")
 args = parser.parse_args()
 
 
-def hmm_predict(genome_assembly_path):
+def hmm_predict(genome_assembly_path,cpus):
     dir_hmm = os.listdir('../Family_Seq/')
     for num_dir_hmm in range(len(dir_hmm)):
         if dir_hmm[num_dir_hmm] != '.DS_Store':
@@ -62,7 +64,7 @@ def hmm_predict(genome_assembly_path):
                     clear_f.seek(0)
                     clear_f.truncate()
             os.system(
-                'nhmmer -o ../Family_Seq/' + dir_hmm[num_dir_hmm] + '/' + dir_hmm[num_dir_hmm] + '.out '
+                'nhmmer --cpu ' + str(cpus) + ' -o ../Family_Seq/' + dir_hmm[num_dir_hmm] + '/' + dir_hmm[num_dir_hmm] + '.out '
                 + '../Family_Seq/' + dir_hmm[num_dir_hmm] + '/' + dir_hmm[num_dir_hmm] + '.hmm '
                 + genome_assembly_path)
 
@@ -388,7 +390,7 @@ def save_to_fna_2(filename, sequences, input_title, input_tsd, input_start, inpu
         file.writelines(payload)
 
 
-def multiple_sequence_alignment(e_value, in_genome_assembly_path, out_genome_assembly_path):
+def multiple_sequence_alignment(e_value, in_genome_assembly_path, out_genome_assembly_path,cpus):
     print('BLAST againist the genome assembly ...')
     os.system('blastn -query '+out_genome_assembly_path+'/Step2_extend_blast_input.fa '
               '-subject ' + in_genome_assembly_path + ' '
@@ -399,7 +401,8 @@ def multiple_sequence_alignment(e_value, in_genome_assembly_path, out_genome_ass
               '-gapopen 5 '
               '-gapextend 2 '
               '-penalty -3 '
-              '-reward 2')
+              '-reward 2 '
+              '-num_threads ' + str(cpus))
 
 
 def process_blast_output_1(in_genome_assembly_path, factor_length, factor_copy, max_shift, max_gap, min_copy_number,
@@ -705,7 +708,7 @@ def process_blast_output_2(out_genome_assembly_path):
                     f2.write(line)
 
 
-def blast_rna(out_genome_assembly_path):
+def blast_rna(out_genome_assembly_path,cpus):
     os.system('blastn -query '+out_genome_assembly_path+'/Step4_rna_input.fasta '
               '-subject ../Input_Files/rna_database.fa '
               '-out '+out_genome_assembly_path+'/Step4_rna_output.out '
@@ -715,7 +718,8 @@ def blast_rna(out_genome_assembly_path):
               '-gapopen 5 '
               '-gapextend 2 '
               '-penalty -3 '
-              '-reward 2')
+              '-reward 2 ',
+              '-num_threads '+ str(cpus))
 
 
 def process_rna(out_genome_assembly_path):
@@ -806,7 +810,7 @@ def process_rna(out_genome_assembly_path):
 
 def tandem_repeat_finder(out_genome_assembly_path):
     #path = os.path.abspath(os.path.dirname(os.getcwd()))
-    os.system('trf409.macosx '
+    os.system('trf '
               + out_genome_assembly_path + '/Step4_rna_output.fasta '
               '2 5 7 80 10 10 2000 -d -h -l 6')
 
@@ -900,7 +904,7 @@ def extend_seq(in_genome_assembly_path, out_genome_assembly_path):
 
 def inverted_repeat_finder(out_genome_assembly_path):
     path = os.path.abspath(os.path.dirname(os.getcwd()))
-    os.system('irf305.macos.exe ' + out_genome_assembly_path +'/Step6_irf_input.fasta '
+    os.system('irf ' + out_genome_assembly_path +'/Step6_irf_input.fasta '
               '2 3 5 80 10 20 500000 10000 -d -h -t4 74 -t5 493 -t7 10000')
 
 
@@ -962,12 +966,13 @@ def process_irf(out_genome_assembly_path):
                     f2.write(line)
 
 
-def cluster_sequences(out_genome_assembly_path):
+def cluster_sequences(out_genome_assembly_path,cpus):
     path = os.path.abspath(os.path.dirname(os.getcwd()))
     os.system('cd-hit-est '
               '-i ' + out_genome_assembly_path + '/Step6_irf_output.fasta '
               '-o ' + out_genome_assembly_path + '/Step7_cluster_output.fasta '
-              '-c 0.8')
+              '-c 0.8 '
+              '-T ' + str(cpus))
     with open(out_genome_assembly_path+'/Step7_cluster_output.fasta', 'r')as f_1:
         with open(out_genome_assembly_path+'/Seed_SINE.fa', 'w')as f_2:
             num = 0
@@ -998,17 +1003,17 @@ def re_process_figure(out_genome_assembly_path):
             os.remove(out_genome_assembly_path + '/Figures/' + f'profile_{num}.png')
 
 
-def genome_annotate(in_genome_assembly_path, out_genome_assembly_path, in_nonredundant):
+def genome_annotate(in_genome_assembly_path, out_genome_assembly_path, in_nonredundant,cpus):
     #path = os.path.abspath(os.path.dirname(os.getcwd()))
     print(in_genome_assembly_path)
     print(out_genome_assembly_path)
     if in_nonredundant == 'y':
-        os.system('RepeatMasker -e ncbi -pa 36 -q -no_is -norna -nolow -div 40 '
+        os.system('RepeatMasker -e ncbi -pa ' + str(cpus) + ' -q -no_is -norna -nolow -div 40 '
                   '-lib  ' + out_genome_assembly_path + '/Seed_SINE.fa '
                   '-cutoff 225 ' + in_genome_assembly_path + ' '
                   '-dir ' + out_genome_assembly_path + '/RepeatMasker/')
     elif in_nonredundant == 'n':
-        os.system('RepeatMasker -e ncbi -pa 36 -q -no_is -norna -nolow -div 40 '
+        os.system('RepeatMasker -e ncbi -pa ' + str(cpus) + ' -q -no_is -norna -nolow -div 40 '
                   '-lib  ' + out_genome_assembly_path + '/Step7_cluster_output.fasta '
                   '-cutoff 225 ' + in_genome_assembly_path + ' '
                   '-dir ' + out_genome_assembly_path + '/RepeatMasker/')
@@ -1098,6 +1103,8 @@ def main_function():
     input_bound = args.boundary
     input_figure = args.figure
     input_non_redundant = args.non_redundant
+    
+    cpus = args.threads
 
     start_time = time.time()
     print('************************************************************************')
@@ -1105,7 +1112,7 @@ def main_function():
     print('************************************************************************')
     if input_pattern == 1:
         print('================ Step 1: HMMER prediction has begun ==================')
-        hmm_predict(input_genome_assembly_path)
+        hmm_predict(input_genome_assembly_path,cpus)
         process_hmm_output_3(1e-10, input_genome_assembly_path, input_pattern, output_genome_assembly_path)
     elif input_pattern == 2:
         print('================ Step 1: Structure search has begun ==================')
@@ -1113,7 +1120,7 @@ def main_function():
         process_sine_finder(input_genome_assembly_path, input_sine_finder, output_genome_assembly_path, input_pattern)
     elif input_pattern == 3:
         print('====== Step 1: HMMER prediction and structure search has begun =======')
-        hmm_predict(input_genome_assembly_path)
+        hmm_predict(input_genome_assembly_path,cpus)
         process_hmm_output_3(1e-10, input_genome_assembly_path, input_pattern, output_genome_assembly_path)
         sine_finder(input_genome_assembly_path)
         process_sine_finder(input_genome_assembly_path, input_sine_finder, output_genome_assembly_path, input_pattern)
@@ -1126,7 +1133,7 @@ def main_function():
     print('\n======================== Step 2 has been done ========================\n\n')
 
     print('================ Step 3: MSA implementation has begun ================')
-    multiple_sequence_alignment(1e-10, input_genome_assembly_path, output_genome_assembly_path)
+    multiple_sequence_alignment(1e-10, input_genome_assembly_path, output_genome_assembly_path,cpus)
     process_blast_output_1(input_genome_assembly_path, input_factor_length, input_factor_copy_number,
                            input_max_shift, input_max_gap, input_min_copy_number,
                            1, output_genome_assembly_path, input_bound, input_figure)
@@ -1135,7 +1142,7 @@ def main_function():
     print('\n======================== Step 3 has been done ========================\n\n')
 
     print('========= Step 4: RNA derived head identification has begun ==========')
-    blast_rna(output_genome_assembly_path)
+    blast_rna(output_genome_assembly_path,cpus)
     process_rna(output_genome_assembly_path)
     print('\n========================= Step 4 has been done =======================\n\n')
 
@@ -1151,7 +1158,7 @@ def main_function():
     print('\n========================= Step 6 has been done =======================\n\n')
 
     print('=============== Step 7: Sequences clustering has begun ===============')
-    cluster_sequences(output_genome_assembly_path)
+    cluster_sequences(output_genome_assembly_path,cpus)
     print('\n======================== Step 7 has been done ========================\n\n')
 
     print('================= Step 8: Genome annotation has begun ================')
@@ -1160,7 +1167,7 @@ def main_function():
         if not os.path.exists(dirs):
             os.makedirs(dirs)
         re_process_figure(output_genome_assembly_path)
-    genome_annotate(input_genome_assembly_path, output_genome_assembly_path, input_non_redundant)
+    genome_annotate(input_genome_assembly_path, output_genome_assembly_path, input_non_redundant,cpus)
     print('\n========================= Step 8 has been done =======================\n\n')
 
     end_time = time.time()
