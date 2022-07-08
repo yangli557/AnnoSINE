@@ -105,3 +105,5 @@ python3 AnnoSINE.py 3 ../Testing/A.thaliana_Chr4.fasta ../Output_Files
 Results of AnnoSINE tests on testing data are saved in Output_Files.
 
 # Citations
+Please cite the paper if you use this code:
+Yang Li, Ning Jiang, Yanni Sun, AnnoSINE: a short interspersed nuclear elements annotation tool for plant genomes, Plant Physiology, Volume 188, Issue 2, February 2022, Pages 955–970, https://doi.org/10.1093/plphys/kiab524
