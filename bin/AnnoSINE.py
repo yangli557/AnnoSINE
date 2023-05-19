@@ -718,7 +718,7 @@ def blast_rna(out_genome_assembly_path,cpus):
               '-gapopen 5 '
               '-gapextend 2 '
               '-penalty -3 '
-              '-reward 2 ',
+              '-reward 2 '
               '-num_threads '+ str(cpus))
 
 
