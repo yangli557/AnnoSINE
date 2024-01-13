@@ -7,6 +7,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 import matplotlib.pyplot as plt
 import operator
+import subprocess
 
 
 print('Example: python3 AnnoSINE.py 2 ../Input_Files/test.fasta ../Output_Files')
@@ -805,14 +806,26 @@ def process_rna(out_genome_assembly_path):
 
 
 def tandem_repeat_finder(out_genome_assembly_path):
-    #path = os.path.abspath(os.path.dirname(os.getcwd()))
-    os.system('trf409.macosx '
-              + out_genome_assembly_path + '/Step4_rna_output.fasta '
-              '2 5 7 80 10 10 2000 -d -h -l 6')
+    p = subprocess.Popen(
+        ['trf409.macosx',
+         out_genome_assembly_path + '/Step4_rna_output.fasta',
+         '2',
+         '5',
+         '7',
+         '80',
+         '10',
+         '10',
+         '2000',
+         '-d',
+         '-h',
+         '-l', '6'],
+        cwd="../Output_Files"
+    )
+    p.wait()
 
 
 def process_trf(input_trf_prob, out_genome_assembly_path):
-    trf_file = '../bin/Step4_rna_output.fasta.2.5.7.80.10.10.2000.dat'
+    trf_file = '../Output_Files/Step4_rna_output.fasta.2.5.7.80.10.10.2000.dat'
     with open(trf_file, 'r')as trf_f:
         trf_list = []
         num = -1
