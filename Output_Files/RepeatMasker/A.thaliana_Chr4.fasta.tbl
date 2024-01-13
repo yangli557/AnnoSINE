@@ -54,6 +54,6 @@ Low complexity:          0            0 bp    0.00 %
 
 RepeatMasker version 4.1.2 , quick mode
                                           
-run with rmblastn version 2.11.0+
+run with rmblastn version 2.14.1+
 The query was compared to unclassified sequences in ".../Seed_SINE.fa"
 FamDB: 
