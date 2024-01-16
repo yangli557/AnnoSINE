@@ -913,7 +913,7 @@ def extend_seq(in_genome_assembly_path, out_genome_assembly_path):
 
 def inverted_repeat_finder(out_genome_assembly_path):
     path = os.path.abspath(os.path.dirname(os.getcwd()))
-    os.system('irf305.macos.exe ' + out_genome_assembly_path +'/Step6_irf_input.fasta '
+    os.system('irf308.macos.exe ' + out_genome_assembly_path +'/Step6_irf_input.fasta '
               '2 3 5 80 10 20 500000 10000 -d -h -t4 74 -t5 493 -t7 10000')
 
 
