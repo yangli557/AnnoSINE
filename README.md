@@ -43,7 +43,7 @@ To use AnnoSINE, you need to install the tools listed below.
 - [CD-HIT 4.8.1](https://github.com/weizhongli/cdhit/releases/download/V4.8.1/cd-hit-v4.8.1-2019-0228.tar.gz)
 - [RepeatMasker 4.1.2](http://www.repeatmasker.org/RepeatMasker/) (Search
   Engine: [RMBlast 2.14.1+](https://www.repeatmasker.org/rmblast/))
-- [Node 12.18.2](https://nodejs.org/en/download/)
+- [TSD Searcher v0.2.0](https://github.com/charlieyule/tsd-searcher/releases/tag/v0.2.0)
 
 # Installation
 
