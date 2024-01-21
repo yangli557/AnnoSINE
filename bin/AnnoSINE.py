@@ -254,7 +254,29 @@ def merge_tsd_input(pattern, out_genome_assembly_path):
 
 
 def search_tsd(out_genome_assembly_path):
-    os.system('node ./TSD_Searcher.js ' + out_genome_assembly_path)
+    output_path = os.path.join(out_genome_assembly_path, 'Step2_tsd.txt')
+    try:
+        os.remove(output_path)
+    except FileNotFoundError:
+        pass
+    p = subprocess.Popen(
+        [
+            'tsd-searcher',
+            '../Output_Files/Step1_extend_tsd_input.fa',
+            '-o', os.path.join(out_genome_assembly_path, 'Step2_tsd.txt'),
+            '--lo', '0',
+            '--lr', '50',
+            '--ro', '0',
+            '--rr', '70',
+            '--r1', '1',
+            '--r2', '1',
+            '--r3', '1',
+            '--spc', '1',
+            '--mt', '10',
+            '--mmt', '1',
+        ]
+    )
+    p.wait()
 
 
 def is_at_seq(seq, tolerance):
